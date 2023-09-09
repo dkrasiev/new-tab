@@ -23,8 +23,9 @@
                         <!-- use aria label for buttons -->
                         <button
                             v-for="c in colors"
+                            :key="c"
                             class="colorToggle"
-                            :style="{ backgroundColor: `var(--color-${c})` }"
+                            :style="`background: var(--color-${c})`"
                             @click="toggleTheme(c)"
                             @mouseenter="previewTheme(c)"
                             @mouseleave="toggleTheme()"
@@ -257,22 +258,7 @@ export default {
     flex-direction: column;
     align-items: flex-end;
 }
-/* .options-menu {
-    z-index: 10;
-    width: 320px;
-    height: 640px;
-    max-height: 100%;
-    overflow: scroll;
-    position: fixed;
-    bottom: calc(var(--page-padding) + 36px + var(--space-small));
-    top: var(--page-padding);
-    margin-top: auto;
-    right: var(--page-padding);
-    padding: var(--space-medium);
-    border: var(--border);
-    border-radius: var(--rounded);
-    background-color: white;
-} */
+
 .options-menu {
     padding-top: var(--page-padding);
     width: 320px;
@@ -281,45 +267,53 @@ export default {
     position: fixed;
     top: 0;
     right: var(--page-padding);
-    bottom: calc(var(--page-padding) + 36px + var(--space-small));
+    bottom: calc(var(--page-padding) + 36px + var(--space-sm));
     z-index: 10;
 }
+
 .donation-modal {
     position: fixed;
     left: calc(50% - 150px);
     top: calc(50% - 307.5px);
     z-index: 11;
 }
+
 .close:first-child {
     display: flex;
     position: fixed;
-    left: calc(50% + 150px + var(--space-small));
-    top: calc(50% - 307.5px - var(--space-small));
+    left: calc(50% + 150px + var(--space-sm));
+    top: calc(50% - 307.5px - var(--space-sm));
     width: 20px;
     transform: rotate(45deg);
-    background-color: black;
+    background: black;
     z-index: 13;
 }
+
 .close:last-child {
     display: flex;
     position: fixed;
-    left: calc(50% + 150px + var(--space-small));
-    top: calc(50% - 307.5px - var(--space-small));
+    left: calc(50% + 150px + var(--space-sm));
+    top: calc(50% - 307.5px - var(--space-sm));
     width: 20px;
     transform: rotate(-45deg);
-    background-color: black;
+    background: black;
     z-index: 13;
 }
+
 .options-menu--inner {
     margin-top: auto;
-    padding: var(--space-medium);
+    padding: var(--space-md);
     width: 100%;
     height: 100%;
     max-height: 640px;
-    background: white;
+    background: var(--theme-bg-overlay);
     border: var(--border);
     border-radius: var(--rounded);
     overflow-y: scroll;
+}
+
+.options-menu--inner::-webkit-scrollbar {
+    display: none;
 }
 
 .options-button {
@@ -327,28 +321,33 @@ export default {
     bottom: var(--page-padding);
     right: var(--page-padding);
 }
+
 .optionsMenu-enter-active,
 .optionsMenu-leave-active {
     transition: ease-in-out all 100ms;
 }
+
 .optionsMenu-enter-from,
 .optionsMenu-leave-to {
     opacity: 0;
     transform: scale(0.95);
 }
+
 .overlay {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: transparent;
+    background: transparent;
     z-index: 9;
 }
+
 .dark {
-    background-color: var(--color-dark-gray);
+    background: var(--theme-bg-surface);
     opacity: 0.6;
 }
+
 .colorToggle {
     height: 24px;
     width: 24px;
@@ -356,11 +355,13 @@ export default {
     cursor: pointer;
     border: var(--border);
 }
+
 .time {
     font-size: 24px;
     line-height: 24px;
     font-weight: bold;
 }
+
 .outline {
     border: var(--border);
     padding: 4px;

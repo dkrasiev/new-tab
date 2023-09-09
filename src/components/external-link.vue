@@ -9,7 +9,7 @@
                     height="24"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="var(--color-soft-gray)"
+                    stroke="var(--theme-fg-muted)"
                     stroke-width="3"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -25,6 +25,7 @@
             </div></div
     ></a>
 </template>
+
 <script>
 export default {
     props: {
@@ -40,7 +41,7 @@ export default {
 
 <style scoped>
 .text {
-    color: var(--var-dark-gray);
+    color: var(--theme-fg);
     font-size: 11px;
     padding: 4px;
     border-radius: var(--rounded-full);
@@ -58,7 +59,7 @@ export default {
     width: calc(100% - 8px);
     left: 4px;
     bottom: 10%;
-    background-color: var(--theme-bg);
+    background: var(--theme-accent);
     transition: ease all 20ms;
 }
 .text.underline:hover::after,
@@ -69,7 +70,7 @@ export default {
     width: calc(100% - 8px);
     left: 4px;
     bottom: 10%;
-    background-color: var(--theme-bg);
+    background: var(--theme-accent);
     transition: ease all 20ms;
     visibility: visible;
 }

@@ -6,9 +6,9 @@
     --surface: #1f1d2e;
     --overlay: #26233a;
 
-    --muted: #6e6a86;
-    --subtle: #908caa;
     --text: #e9def4;
+    --subtle: #908caa;
+    --muted: #6e6a86;
 
     --love: #eb6f92;
     --gold: #f6c177;
@@ -22,6 +22,18 @@
     --highlight-high: #524f67;
     /* Rose Pine End */
 
+    /* Theme Defaults Start */
+    --theme-accent: var(--rose);
+
+    --theme-bg: var(--base);
+    --theme-bg-surface: var(--surface);
+    --theme-bg-overlay: var(--overlay);
+
+    --theme-fg: var(--theme-accent);
+    --theme-fg-subtle: var(--subtle);
+    --theme-fg-muted: var(--muted);
+    /* Theme Defaults End */
+
     --color-love: var(--love);
     --color-gold: var(--gold);
     --color-rose: var(--rose);
@@ -29,24 +41,17 @@
     --color-foam: var(--foam);
     --color-iris: var(--iris);
 
-    --color-white-semi: rgba(255, 255, 255, 0.8);
-    --color-white-demi: rgba(255, 255, 255, 0.4);
-    --color-eggplant: #393438;
-    --color-dark-gray: #3f3b3b;
-    --color-soft-gray: #616161;
-    --color-light-gray: hsl(0, 0%, 87%);
+    --transition-duration: 0.1s;
 
-    --theme-bg: var(--color-rose);
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
 
-    --space-small: 16px;
-    --space-medium: 32px;
-    --space-large: 64px;
-
-    --page-padding: 32px;
+    --page-padding: var(--space-md);
 
     --rounded-full: 9999px;
     --rounded: 12px;
-    --border: 2px solid var(--color-dark-gray);
+    --border: 2px solid var(--highlight-high);
 
     --font-serif: 'Lora', serif;
 
@@ -54,22 +59,22 @@
 }
 
 .love:root {
-    --theme-bg: var(--color-love);
+    --theme-accent: var(--color-love);
 }
 .gold:root {
-    --theme-bg: var(--color-gold);
+    --theme-accent: var(--color-gold);
 }
 .rose:root {
-    --theme-bg: var(--color-rose);
+    --theme-accent: var(--color-rose);
 }
 .pine:root {
-    --theme-bg: var(--color-pine);
+    --theme-accent: var(--color-pine);
 }
 .foam:root {
-    --theme-bg: var(--color-foam);
+    --theme-accent: var(--color-foam);
 }
 .iris:root {
-    --theme-bg: var(--color-iris);
+    --theme-accent: var(--color-iris);
 }
 
 html,
@@ -83,21 +88,21 @@ body {
         'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--theme-bg);
-    color: var(--color-dark-gray);
     min-height: 100vh;
+
+    color: var(--theme-fg);
+    background: var(--theme-bg);
 }
 
 .space-small {
-    height: var(--space-small);
+    height: var(--space-sm);
 }
 .space-medium {
-    height: var(--space-medium);
+    height: var(--space-md);
 }
 .divider {
-    width: 240px;
     height: 1px;
-    background-color: var(--color-light-gray);
+    background: var(--highlight-high);
     border-radius: var(--rounded-full);
     margin: 12px auto;
 }

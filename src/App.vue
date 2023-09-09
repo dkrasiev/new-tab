@@ -57,6 +57,6 @@ export default {
     justify-items: center;
     align-items: center;
     min-height: 100vh;
-    padding: var(--space-medium);
+    padding: var(--space-md);
 }
 </style>

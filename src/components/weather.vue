@@ -29,7 +29,7 @@
             <div class="row">
                 <div
                     class="alert-container"
-                    style="margin-right: var(--space-small);"
+                    style="margin-right: var(--space-sm);"
                 >
                     <v-alert style="width: 24px; height: 24px;" />
                 </div>
@@ -167,10 +167,10 @@ export default {
 }
 .wi {
     font-size: var(--text-large);
-    color: var(--color-dark-gray);
-    background-color: var(--theme-bg);
-    height: var(--space-large);
-    width: var(--space-large);
+    color: var(--theme-bg-surface);
+    background: var(--theme-accent);
+    height: var(--space-lg);
+    width: var(--space-lg);
     border-radius: var(--rounded-full);
     line-height: 64px;
 }
@@ -198,8 +198,8 @@ export default {
     top: var(--page-padding);
     left: 50%;
     margin-left: -160px;
-    background-color: white;
-    padding: var(--space-small);
+    background: var(--theme-bg-overlay);
+    padding: var(--space-sm);
     border-radius: var(--rounded);
     border: var(--border);
     width: 320px;
@@ -225,6 +225,6 @@ export default {
     width: 24px;
     height: 24px;
     border-radius: var(--rounded-full);
-    background-color: var(--theme-bg);
+    background: var(--theme-bg-surface);
 }
 </style>

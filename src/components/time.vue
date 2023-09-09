@@ -80,8 +80,9 @@ export default {
     width: 1ch;
 }
 .outline {
-    border: 3px solid var(--color-dark-gray);
-    padding: var(--space-small);
+    border: var(--border);
+    border-width: 3px;
+    padding: var(--space-sm);
 }
 .italic {
     text-transform: uppercase;

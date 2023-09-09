@@ -80,38 +80,41 @@ label {
     position: relative;
     width: 96px;
     height: 124px;
-    border: 2px solid var(--color-dark-gray);
+    border: var(--border);
     border-radius: var(--rounded);
-    background-color: var(--theme-bg);
+    background: var(--theme-bg-surface);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
+
 .dot {
     position: absolute;
     top: 8px;
     left: 8px;
-    height: 12px;
-    width: 12px;
-    box-shadow: 0px 0px 0px 2px var(--color-dark-gray);
-    border: 2px solid white;
+    height: 16px;
+    width: 16px;
+    border: var(--border);
     border-radius: var(--rounded-full);
-    background-color: white;
+    background: var(--theme-bg-surface);
     cursor: pointer;
 }
+
 .filled {
-    background-color: var(--color-dark-gray);
+    background: var(--theme-accent);
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(96px, max-content));
     justify-content: center;
-    grid-gap: var(--space-small);
+    grid-gap: var(--space-sm);
     padding: 6px 0px;
 }
+
 input:focus + label,
 input:active + label {
-    border: 2px solid var(--theme-bg);
+    border: var(--border);
 }
 </style>

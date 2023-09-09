@@ -10,14 +10,21 @@
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
             class="toggle"
             :class="selected ? 'selected' : ''"
         >
-            <rect x="1" y="5" width="22" height="14" rx="7" ry="7" />
+            <rect
+                x="1"
+                y="5"
+                width="22"
+                height="14"
+                rx="7"
+                ry="7"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
             <circle :cx="selected ? 16 : 8" cy="12" r="4" />
         </svg>
     </button>
@@ -60,16 +67,16 @@ svg.toggle > rect,
 svg.toggle > circle {
     transition: all 200ms ease-in-out;
 }
-svg.toggle.selected > circle {
-    fill: white;
-}
 svg.toggle > circle {
-    fill: var(--theme-bg);
+    fill: var(--theme-accent);
+}
+svg.toggle.selected > circle {
+    fill: var(--theme-bg-surface);
 }
 svg.toggle > rect {
-    fill: white;
+    fill: var(--theme-bg-surface);
 }
 svg.toggle.selected > rect {
-    fill: var(--theme-bg);
+    fill: var(--theme-accent);
 }
 </style>
