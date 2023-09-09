@@ -64,6 +64,8 @@ export default {
 .wrapper {
     grid-area: middle;
     text-align: center;
+
+    user-select: none;
 }
 .time {
     font-size: 96px;
