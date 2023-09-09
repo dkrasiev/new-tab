@@ -22,45 +22,11 @@
                     <div class="row even" style="padding: 6px 0px;">
                         <!-- use aria label for buttons -->
                         <button
+                            v-for="c in colors"
                             class="colorToggle"
-                            style="background-color: var(--color-lavender);"
-                            @click="toggleTheme('lavender')"
-                            @mouseenter="previewTheme('lavender')"
-                            @mouseleave="toggleTheme()"
-                        />
-                        <button
-                            class="colorToggle"
-                            style="background-color: var(--color-rose);"
-                            @click="toggleTheme('rose')"
-                            @mouseenter="previewTheme('rose')"
-                            @mouseleave="toggleTheme()"
-                        />
-                        <button
-                            class="colorToggle"
-                            style="background-color: var(--color-lemon);"
-                            @click="toggleTheme('lemon')"
-                            @mouseenter="previewTheme('lemon')"
-                            @mouseleave="toggleTheme()"
-                        />
-                        <button
-                            class="colorToggle"
-                            style="background-color: var(--color-sea);"
-                            @click="toggleTheme('sea')"
-                            @mouseenter="previewTheme('sea')"
-                            @mouseleave="toggleTheme()"
-                        />
-                        <button
-                            class="colorToggle"
-                            style="background-color: var(--color-leaf);"
-                            @click="toggleTheme('leaf')"
-                            @mouseenter="previewTheme('leaf')"
-                            @mouseleave="toggleTheme()"
-                        />
-                        <button
-                            class="colorToggle"
-                            style="background-color: var(--color-sand);"
-                            @click="toggleTheme('sand')"
-                            @mouseenter="previewTheme('sand')"
+                            :style="{ backgroundColor: `var(--color-${c})` }"
+                            @click="toggleTheme(c)"
+                            @mouseenter="previewTheme(c)"
                             @mouseleave="toggleTheme()"
                         />
                     </div>
@@ -275,6 +241,8 @@ export default {
             refreshDisabled,
             toggleDonationModal,
             isDonationModalOpen,
+            // TODO: move to store
+            colors: ['love', 'gold', 'rose', 'pine', 'foam', 'iris'],
         }
     },
 }

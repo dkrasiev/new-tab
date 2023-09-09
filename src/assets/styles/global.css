@@ -1,12 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
 :root {
-    --color-lavender: #dad4e0;
-    --color-rose: #f5e0dc;
-    --color-lemon: #fce5c4;
-    --color-sea: #c6ced3;
-    --color-leaf: #ced9cd;
-    --color-sand: #e4dcd4;
+    /* Rose Pine Start */
+    --base: #191724;
+    --surface: #1f1d2e;
+    --overlay: #26233a;
+
+    --muted: #6e6a86;
+    --subtle: #908caa;
+    --text: #e9def4;
+
+    --love: #eb6f92;
+    --gold: #f6c177;
+    --rose: #ebbcba;
+    --pine: #31748f;
+    --foam: #9ccfd8;
+    --iris: #c4a7e7;
+
+    --highlight-low: #21202e;
+    --highlight-med: #403d52;
+    --highlight-high: #524f67;
+    /* Rose Pine End */
+
+    --color-love: var(--love);
+    --color-gold: var(--gold);
+    --color-rose: var(--rose);
+    --color-pine: var(--pine);
+    --color-foam: var(--foam);
+    --color-iris: var(--iris);
 
     --color-white-semi: rgba(255, 255, 255, 0.8);
     --color-white-demi: rgba(255, 255, 255, 0.4);
@@ -15,7 +36,7 @@
     --color-soft-gray: #616161;
     --color-light-gray: hsl(0, 0%, 87%);
 
-    --theme-bg: var(--color-lavender);
+    --theme-bg: var(--color-rose);
 
     --space-small: 16px;
     --space-medium: 32px;
@@ -32,23 +53,23 @@
     --text-large: 36px;
 }
 
+.love:root {
+    --theme-bg: var(--color-love);
+}
+.gold:root {
+    --theme-bg: var(--color-gold);
+}
 .rose:root {
     --theme-bg: var(--color-rose);
 }
-.sea:root {
-    --theme-bg: var(--color-sea);
+.pine:root {
+    --theme-bg: var(--color-pine);
 }
-.leaf:root {
-    --theme-bg: var(--color-leaf);
+.foam:root {
+    --theme-bg: var(--color-foam);
 }
-.lemon:root {
-    --theme-bg: var(--color-lemon);
-}
-.lavender:root {
-    --theme-bg: var(--color-lavender);
-}
-.sand:root {
-    --theme-bg: var(--color-sand);
+.iris:root {
+    --theme-bg: var(--color-iris);
 }
 
 html,
